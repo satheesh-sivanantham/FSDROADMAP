@@ -1,1 +1,104 @@
-javascript workout
+Javascript Day-1
+-----------------------------------
+
+1. Write a blog on Difference between HTTP1.1 vs HTTP2
+
+Indroduction of HTTP: 
+---------------------
+HTTP (Hypertext Transfer Protocol) is a protocol used for exchanging information over the internet. HTTP is like the delivery system for information on the internet. 
+It makes sure information goes from one place to another, like how ships carry goods across the ocean. It's the foundation of the World Wide Web.
+
+Difference of HTTP1.1 vs HTTP2: 
+-------------------------------
+
+  * The first version of HTTP was called HTTP/1.1. It's created on 1997
+
+  * In 2015, a new version of HTTP called HTTP2 was created.
+
+  * HTTP2 is much faster and more efficient than HTTP1.1.
+
+  * HTTP1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it.
+
+  * HTTP2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource.
+
+  * In HTTP1.1 each request had to wait for a response before the next request Could be sent.
+
+  * HTTP2 uses multiplexing to allow multiple concurrent requests and responses over a single TCP Connection.
+
+  * HTTP1.1 relies on the transport layer to avoid buffer overflow, so each new TCP connection requires a separate flow control mechanism. 
+
+  * The major feature differentiates HTTP2 from HTTP1.1 is the binary framing layer. Unlike HTTP1.1, HTTP2 uses a binary framing layer
+
+
+2. Write a blog about objects and its internal representation in Javascript?
+
+Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript. These objects are quite different from JavaScript’s primitive data-types
+(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).
+
+Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.
+
+objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or 
+functions and are called properties and methods, respectively, in the context of an object.
+
+An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where a key is a string (also called a “property name”), and value can be anything.
+
+let us look at an example of a JavaScript Object :
+--------------------------------------------------
+
+    let school = {
+    name : “Vivekananda School”,
+    location : “Delhi”,
+    established : “1971”
+    }
+
+In the above example “name”, “location”, “established” are all “keys” and “Vivekananda School”, “Delhi” and 1971 are values of these keys respectively.
+
+Each of these keys is referred to as properties of the object
+
+3. Read about IP address, port, HTTP methods, MAC address?
+
+IP Address:
+-----------
+Protocol (IP) address is a unique numerical identifier for every device or network that connects to the internet. Typically assigned by an internet service provider (ISP), 
+an IP address is an online device address used for communicating across the internet.
+
+There are two versions of IP addresses that are commonly used on the internet: IPv4 and IPv6. An IPv4 address is expressed as a set of four dotted decimal numbers, where each octet is separated by a period, such as 192.168.35.4.
+The three digits in the first octet represent a particular network on the internet while the rest of the digits represent the actual host address within the local network, such as a workstation or a server. 
+An IPv6 address represents eight groups of four hexadecimal digits separated by colons, such as 2620:cc:8000:1c82:544c:cc2e:f2fa:5a9b. 
+
+Port:
+-----
+
+A port is a virtual point where network connections start and end. Ports are software-based and managed by a computer's operating system. Each port is associated with a specific process or service.
+Ports allow computers to easily differentiate between different kinds of traffic: emails go to a different port than webpages, for instance, even though both reach a computer over the same Internet connection.
+
+HTTP methods:
+-------------
+
+GET: The GET method is used to retrieve information from the given server using a given URI. Requests using GET should only retrieve data and should have no other effect on the data.
+
+HEAD: Same as GET, but transfers the status line and header section only.
+
+POST: A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms.
+
+PUT: Replaces all current representations of the target resource with the uploaded content.
+
+DELETE: Removes all current representations of the target resource given by a URI.
+
+CONNECT: Establishes a tunnel to the server identified by a given URI.
+
+OPTIONS: Describes the communication options for the target resource.
+
+TRACE: Performs a message loop-back test along the path to the target resource.
+
+MAC address:
+------------
+
+    * MAC address is the physical address, which uniquely identifies each device on a given network. To make communication between two networked devices, we need two addresses: IP address and MAC address. 
+    It is assigned to the NIC (Network Interface card) of each device that can be connected to the internet.
+    * It stands for Media Access Control, and also known as Physical address, hardware address, or BIA (Burned In Address).
+    * It is globally unique; it means two devices cannot have the same MAC address. It is represented in a hexadecimal format on each device, such as 00:0a:95:9d:67:16.
+    * It is 12-digit, and 48 bits long, out of which the first 24 bits are used for OUI(Organization Unique Identifier), and 24 bits are for NIC/vendor-specific.
+    * It works on the data link layer of the OSI model.
+    * It is provided by the device's vendor at the time of manufacturing and embedded in its NIC, which is ideally cannot be changed.
+    * The ARP protocol is used to associate a logical address with a physical or MAC address.
