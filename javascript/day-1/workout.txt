@@ -62,7 +62,8 @@ IP Address:
 Protocol (IP) address is a unique numerical identifier for every device or network that connects to the internet. Typically assigned by an internet service provider (ISP), 
 an IP address is an online device address used for communicating across the internet.
 
-There are two versions of IP addresses that are commonly used on the internet: IPv4 and IPv6. An IPv4 address is expressed as a set of four dotted decimal numbers, where each octet is separated by a period, such as 192.168.35.4.
+There are two versions of IP addresses that are commonly used on the internet: IPv4 and IPv6. An IPv4 address is expressed as a set of four dotted decimal numbers, where each octet is separated by a period, 
+such as 192.168.35.4.
 The three digits in the first octet represent a particular network on the internet while the rest of the digits represent the actual host address within the local network, such as a workstation or a server. 
 An IPv6 address represents eight groups of four hexadecimal digits separated by colons, such as 2620:cc:8000:1c82:544c:cc2e:f2fa:5a9b. 
 
