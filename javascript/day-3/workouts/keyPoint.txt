@@ -1,0 +1,12 @@
+- JavaScript is a synchronous single threaded language.
+- JavaScript is can execute one commond at a time in a specific order(from top to bottom).
+- It'll go to the next line only the current line is executed.
+
+Function Execution 
+
+- when we run the code literally it will copy everythimg copied into memory space 
+- At first it will allocate the memmory for the variable what ever there in the code
+- Which means it create two phases one is variable environment and another one is code excecution environment 
+- Initially it will allocate memory for all variables and functions 
+- it set the special value(undefind) to the variables and functions for the memory allocation in the firt phase.
+- 
