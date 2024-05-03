@@ -101,3 +101,131 @@ findPrimeNumbers(unknownNumbers);
       });
       console.log('Prime',numArray);
 })( [2, 13, 44, 5, 8, 17, 22, 9,210])
+
+//----------------------------------------------------------------------------------------
+
+//g.Remove duplicates from an array
+//Anonymous Functions 
+function findDup(array){
+  let dup = [...new Set(array)];
+  console.log('Remove Dup:',dup);
+}
+
+findDup([1,1,2,3,3,4]);
+
+//IIFE
+(function(array){
+  let dup = [...new Set(array)];
+  console.log(dup);
+ })([1,1,2,2,3,4])
+
+//----------------------------------------------------------------------------------------
+
+//h.Rotate an array by k times
+
+//Anonymous Functions 
+ function rotateArray(arr, k){
+  k = k % arr.length;
+
+  // Rotate the array using slice and concatenation
+  let rotated = arr.slice(k).concat(arr.slice(0, k));
+  
+  console.log("Rotated array:", rotated);
+ }
+
+ rotateArray( [1, 2, 3, 4, 5], 10);
+
+ //IIFE
+(function(arr, k){
+  k = k % arr.length;
+
+  // Rotate the array using slice and concatenation
+  let rotated = arr.slice(k).concat(arr.slice(0, k));
+  
+  console.log("Rotated array:", rotated);
+ })( [1, 2, 3, 4, 5,6,8], 20)
+//----------------------------------------------------------------------------------------
+//f. Return median of two sorted arrays of the same size.
+
+//Anonymous Functions 
+function findMedian(arr1, arr2) {
+  let merged = arr1.concat(arr2);
+  merged.sort(function(a, b) {
+      return a - b;
+  });
+
+  let length = merged.length;
+  let mid = Math.floor(length / 2);
+  let median;
+  if (length % 2 === 0) {
+      // If the length is even, return the average of the two middle elements
+      median = (merged[mid - 1] + merged[mid]) / 2;
+      // return median
+  } else {
+      // If the length is odd, return the middle element
+      median =  merged[mid];
+      // return median
+  }
+  console.log(median)
+  
+};
+
+findMedian([1, 3, 5],[2, 4, 6]);
+
+ //IIFE
+(function(arr1,arr2){
+  let merged = arr1.concat(arr2);
+  merged.sort(function(a, b) {
+      return a - b;
+  });
+
+  let length = merged.length;
+  let mid = Math.floor(length / 2);
+  let median;
+  if (length % 2 === 0) {
+      // If the length is even, return the average of the two middle elements
+      median = (merged[mid - 1] + merged[mid]) / 2;
+      // return median
+  } else {
+      // If the length is odd, return the middle element
+      median =  merged[mid];
+      // return median
+  }
+  console.log(median)
+})([1, 3, 5],[2, 4, 6])
+//----------------------------------------------------------------------------------------
+//Anonymous Functions 
+let words = ["level", "hello", "radar", "world", "civic"];
+
+let isPalindrome = function(word) {
+    return word === word.split("").reverse().join("");
+};
+
+let palindromes = words.filter(function(word) {
+    return isPalindrome(word);
+});
+
+console.log("Palindromes in the array:", palindromes);
+
+ //IIFE
+ (function() {
+  var words = ["level", "radar", "hello", "noon", "world"];
+
+  function isPalindrome(word) {
+    // Convert the word to lowercase to handle case-insensitive comparisons
+    var lowerWord = word.toLowerCase();
+    // Reverse the word
+    var reversedWord = lowerWord.split('').reverse().join('');
+    // Check if the word is equal to its reversed form
+    return lowerWord === reversedWord;
+  }
+
+  var palindromes = [];
+  for (var i = 0; i < words.length; i++) {
+    if (isPalindrome(words[i])) {
+      palindromes.push(words[i]);
+    }
+  }
+
+  console.log("Palindromes in the array:", palindromes);
+})();
